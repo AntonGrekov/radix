@@ -531,8 +531,8 @@ h1, h2, h3, h4, h5, p {
     height: 300px; }
 
 .whoAreWe__text {
-  margin-left: -webkit-calc(564px + 12vw);
-  margin-left: calc(564px + 12vw);
+  margin-left: -webkit-calc(464px + 10vw);
+  margin-left: calc(464px + 10vw);
   width: 55%; }
 
 .text-block__h1 {
@@ -605,13 +605,13 @@ h1, h2, h3, h4, h5, p {
 
 /* We Better Section + Numbers */
 .webetter__title, .numbers__title, .feedback__title {
-  margin-left: -webkit-calc(564px + 12vw);
-  margin-left: calc(564px + 12vw); }
+  margin-left: -webkit-calc(364px + 12vw);
+  margin-left: calc(364px + 12vw); }
 
 .webetter__h1, .numbers__h1, .feedback__h1 {
   font-weight: 500;
   line-height: normal;
-  font-size: 90px;
+  font-size: 80px;
   letter-spacing: 0.1em; }
 
 .webetter__p, .numbers__p, .feedback__p {
@@ -912,7 +912,7 @@ h1, h2, h3, h4, h5, p {
   visibility: hidden; }
 
 /*==========  Desktop First  ==========*/
-@media only screen and (max-width: 1470px) {
+@media only screen and (max-width: 1570px) {
   .main-button {
     width: 288px;
     height: 60px;
