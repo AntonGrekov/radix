@@ -1,0 +1,317 @@
+/* Menu Modal Window */
+
+.menu
+	display: none
+	width: 100%
+	min-height: 100%
+	position: fixed
+	overflow-y: scroll
+	background-color: $modal-bg
+	z-index: 3
+
+	&_container
+		padding: 85px 100px
+
+	&__close-button
+		cursor: pointer
+		font-size: 50px
+		line-height: 0
+		color: #fff
+		position: absolute
+		top: 35px
+		left: 1.2vw
+	&__content
+		display: grid
+		height: 85vh
+		grid-template-columns: 1fr 1fr
+	&__ul
+		padding: 0
+		margin: 0
+		list-style: none
+	&__link
+		text-decoration: none
+		color: #fff
+
+		&:hover
+			color: $main
+
+	&__personal-link
+		display: block
+		text-decoration: underline
+		color: #fff
+		font-size: 1rem
+		margin-top: 22vh
+	&__li
+		font-weight: 500
+		line-height: normal
+		font-size: 50px
+		letter-spacing: 0.1em
+		color: #fff
+		padding: 40px 0
+
+	&__link
+		text-decoration: none
+	&__left
+		padding:
+			top: 15vh
+			left: 2vw
+	&__right
+		display: grid
+		padding: 
+			top: 15vh
+			left: 5vw
+		.social-block
+			&_position-abs
+				position: absolute
+				top: 3%
+				right: 25%
+			&__circle
+				position: relative
+				cursor: pointer
+				border-radius: 100%
+				height: 100px
+				width: 100px
+				background: #fff
+				text-align: center
+				box-shadow: none
+
+				&:first-child
+					margin-right: 70px
+
+			&__img-phone
+				display: inline-block
+				background: url(../img/phone.svg) no-repeat
+				height: 50px
+				width: 50px
+				transform: translateY(50%)
+
+			&__phone-input
+				width: 1px
+
+			&_input 
+				background: transparent
+				border-radius: 100%
+				position: absolute
+				width: 95px
+				height: 95px
+
+
+				.social-block__img-phone
+					position: absolute
+					left: 1vw
+					background-image: none
+					background-size: 100% 100%
+
+				.social-block__phone-input
+					border: 5px solid #fff
+					transition: .5s width
+					height: 100px
+					width: 400px
+					border-radius: 125px
+					opacity: 1
+					background: transparent
+
+// Phone input
+
+.phone_form
+	display: none
+	height: 100%
+	width: 100%
+
+.form-show
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 100%
+
+
+.form-phone-input
+	height: 45px
+	font-size: 24px
+	line-height: 40px
+	color: #fff
+	width: 60%
+	background: none
+	border: none
+	padding: 0
+	margin: 0
+	&:focus
+		outline: none
+
+.check-mark
+	display: inline-block
+	vertical-align: middle
+	font-size: 3.5rem
+	color: #fff
+	position: relative
+	line-height: 1rem
+	margin-right: 1vw
+
+/* Menu Modal Window END */
+
+/* Product Popup Window */
+.product-popup
+	display: none
+	overflow: scroll
+	width: 100%
+	height: 100%
+	max-height: 100%
+	position: fixed
+	background: #fff
+	color: #000
+	z-index: 3
+	&_container
+		padding: 
+			top: 3vh
+			left: 4vw
+	&__back-button
+		position: absolute
+		top: 1vh
+		right: 100px
+		cursor: pointer
+	&__left
+		display: inline-grid
+		grid-template-columns: 1fr 1fr 1fr
+		grid-template-areas: "prod-h1 prod-h1 button" "prod-img prod-list prod-list" "descr descr descr"
+		width: 54%
+		vertical-align: top
+	&__right
+		display: inline-block
+		width: 35%
+		margin-left: 25px
+	&__h3
+		font-weight: 600
+		line-height: normal
+		font-size: 24px
+		letter-spacing: 0.1em
+
+
+.about-block
+	&__h1
+		grid-area: prod-h1
+		display: inline-block
+		font-weight: 500
+		line-height: normal
+		font-size: 50px
+		letter-spacing: 0.1em
+		margin-bottom: 25px
+	&__img
+		grid-area: prod-img
+		width: 350px
+		height: 526px
+		background: url(../img/modal.jpg) no-repeat
+		float: left
+		margin-right: 74px
+.product-description
+	grid-area: descr
+	&__p
+		font-weight: 500
+		line-height: normal
+		font-size: 16px
+		letter-spacing: 0.1em
+		margin-bottom: 15px
+
+.detailed-info-list
+	grid-area: prod-list
+	padding: 0
+	margin: 0
+	list-style: none
+	color: #000
+	margin-top: 40px
+	margin-bottom: 50px
+	&__li
+		font-weight: 500
+		line-height: normal
+		font-size: 16px
+		letter-spacing: 0.1em
+		border-bottom: 1px solid black
+		margin-bottom: 
+		width: 90%
+		padding:
+			bottom: 10px
+			top: 10px
+/* Product Popup Window END
+
+
+
+/* Modal Window - Форма связи */
+.modal
+	width: 555px
+	border-radius: 22px
+	top: 40%
+	&-close
+		position: absolute
+		right: 1%
+		top: 5%
+		font-size: 0.65rem
+.contact-form
+	overflow: hidden
+	background: #fff
+	color: #000
+	width: 100%
+	padding: 3%
+	&__item 
+		position: relative
+		margin: 0 0 5%
+	&__item:nth-of-type(3) 
+		margin: 0 0 7.5%
+	&__input 
+		background: transparent
+		font-size: 1rem
+		display: block
+		border: none
+		border-bottom: 1px solid #000
+		height: 50px
+		font-size: 20px
+		width: 100%
+		position: relative
+	&__input[type="textarea"]:focus
+		// height: 200px
+		// transition: .5s all
+		// word-wrap: wrap
+	// &__input[type="textarea"]:focus ~ &__label
+	// 	top: 0
+	// 	position: absolute
+	// 	left: 0
+	// 	color: #fff
+
+	&__h4 
+		display: block
+		font-size: 1.9rem
+		margin: 0 auto 5%
+		text-align: center
+	&__label 
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		font-size: 1rem
+		transition: .3s 
+		width: 100%
+	&__link
+		font-size: 1rem
+		display: block
+		color: $grey
+		margin: 0 0 7.5%
+		
+	&_active &__label 
+		transform: translateY(-135%)
+		font-size: 20px
+		font-weight: 800
+		color: $main
+	&__input:focus + .bot-line:after 
+		width: 100%
+		transform: scale(1)
+		
+
+.bot-line::after 
+	content: ''
+	position: absolute
+	width: 100%
+	transform: scale(0)
+	height: 4px
+	bottom: -2%
+	left: 0%
+	background: $main
+	transition: .3s all
+
+	

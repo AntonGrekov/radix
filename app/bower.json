@@ -1,0 +1,22 @@
+{
+  "name": "radiks",
+  "description": "landing page",
+  "main": "",
+  "authors": [
+    "Anton Grekov",
+    "Sergey Malykov"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap4": "^4.1.3",
+    "jquery": "^3.3.1"
+  }
+}

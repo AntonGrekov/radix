@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Radiks --- Завод Cухих Cтроительных Cмесей</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link rel="stylesheet" href="css/slider.css">
+	
+	<link rel="stylesheet" type="text/css" href="css/slick.css">
+	<link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
+
+	
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+	<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+	<script type="text/javascript" src="js/slick.min.js"></script>
+	<script type="text/javascript" src="js/jquery.maskedinput.min.js"></script>
+	<script type="text/javascript" src="js/jquery.scrollTo.min.js"></script>
+	<script src="bower_components/bootstrap4/dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/onscroll-effect.es6.min.js"></script>
+
+
+
+
+	<!-- Materialize -->
+	<script src="bower_components/materialize/dist/js/materialize.js"></script>
+	<link rel="stylesheet" href="bower_components/materialize/dist/css/materialize.css">
+
+	<link rel="stylesheet" href="css/main.min.css">
+	
+	<script type="text/javascript" src="js/main.js"></script>
+
+</head>
+<body>
+
+	<ul class="propagation-menu" id="propagation-menu">
+		<li class="propagation-menu__el nav-link" href="#p1" ><a href="#p1" class="propagation-menu__link">1</a></li>
+		<li class="propagation-menu__el"></li>
+		<li class="propagation-menu__el nav-link" href="#p2"><a href="#p2" class="propagation-menu__link">2</a></li>
+		<li class="propagation-menu__el"></li>
+		<li class="propagation-menu__el nav-link" href="#p3"><a href="#p3" class="propagation-menu__link">3</a></li>
+		<li class="propagation-menu__el"></li>
+		<li class="propagation-menu__el nav-link" href="#p4"><a href="#p4" class="propagation-menu__link">4</a></li>
+	</ul>
+
+	<!-- Modal Window - Форма связи -->
+	<div id="modal1" class="modal">
+			<div class="moda1l-content">
+
+				<div class="contact-form">
+					<form> 
+					<h4 class="contact-form__h4">Заказ продукта</h4>
+
+					<div class="contact-form__item">
+						<input type="text" class="contact-form__input" id="name">
+						<span class="bot-line"></span>
+						<label class="contact-form__label" for="name">Имя</label>
+					</div>
+
+					<div class="contact-form__item">
+						<input type="text" class="contact-form__input" id="pphone">
+						<span class="bot-line"></span>
+						<label class="contact-form__label" for="pphone">Телефон</label>
+					</div>
+
+					<div class="contact-form__item">
+						<input type="text" class="contact-form__input" id="mail">
+						<span class="bot-line"></span>
+						<label class="contact-form__label" for="mail">Почта</label>
+					</div>
+
+					<a href="#" class="contact-form__link">Согласие на обработку персональных данных</a>
+
+					<input type="submit" class="main-button main-button_popup main-button_block-centered" value="Заказать"/>
+
+					<a href="#!" class="modal-close waves-effect waves-green btn-flat">Закрыть</a>
+					
+					</form>
+				</div>
+				
+			</div>
+		</div>
+
+	<!-- Modal Window - Форма отзыва -->
+	<div id="modal2" class="modal">
+		<div class="moda1l-content">
+	
+			<div class="contact-form">
+				<form>
+					<div class="contact-form__item">
+						<input type="text" class="contact-form__input" id="name-feed">
+						<span class="bot-line"></span>
+						<label class="contact-form__label" for="name-feed">Имя</label>
+					</div>
+	
+					<div class="contact-form__item">
+						<input type="textarea" class="contact-form__input" id="feedback">
+						<span class="bot-line"></span>
+						<label class="contact-form__label" for="feedback">Отзыв</label>
+					</div>
+	
+					<input type="submit" class="main-button main-button_popup main-button_block-centered" value="Добавить" />
+	
+					<a href="#!" class="modal-close waves-effect waves-green btn-flat">Закрыть</a>
+	
+				</form>
+			</div>
+	
+		</div>
+	</div>
+
+	<!-- Modal Window when pressing on burger -->
+	<div class="menu">
+		<div class="menu__close-button"><i class="fas fa-times"></i></div>
+		<div class="menu_container">
+			<div class="menu__content">
+				<div class="menu__left">
+
+					<ul class="menu__ul">
+						<li class="menu__li"><a class="menu__link" href="#p3">Каталог</a></li>
+						<li class="menu__li"><a class="menu__link" href="#p4">Прайс-лист</a></li>
+						<li class="menu__li"><a class="menu__link" href="#contacts">Контакты</a></li>
+					</ul>
+
+					<a href="#" class="menu__personal-link">Согласие на обработку персональных данных</a>
+				</div>
+
+				<div class="menu__right">
+
+
+						<div class="social-block">
+							<div class="social-block__circle"><a href="#modal1" class="social-block__img-email modal-trigger"></a></div>
+							<div class="social-block__circle" id="phone-input-menu">
+
+								<a class="social-block__img-phone"></a>
+								<div class="social-block__phone-input">
+
+									<form action="#" method="post" class="phone_form">
+	
+										<input id="phone" type="text" class="form-phone-input browser-default" required placeholder="+7 (___) ___-__-__" title="Формат: +7 (xxx) xxx xx xx" />
+										<div class="check-mark">
+											<i class="fas fa-phone"></i>
+										</div>
+									</form>
+
+								</div>
+
+
+
+							</div>
+						</div>
+					
+						<div class="main-address main-address_position-margin main-address_color-white">
+							<p class="main-address__text">
+							+7(4722)22-50-51, +7(961)171-55-11</p>
+
+							<p class="main-address__text">
+							308586, Белгородская область, 	
+							Белгородский район, 
+							пос. Политотдельский</p>
+
+							<p class="main-address__text">
+							sssradix@mail.ru 
+							u.bronnikov@mail.ru</p>
+						</div>
+
+
+
+
+				</div>
+		</div>
+		</div>
+
+	</div> 	<!-- Modal Window when pressing on burger ENDS -->
+
+
+	<!-- Modal Popup for Product -->
+	<div class="product-popup">
+		<div class="product-popup_container">
+			
+			<div class="product-popup__back-button">назад</div>
+
+
+			<div class="product-popup__left about-block">
+
+				<div class="about-block__h1">Штукатурка гипсовая</div>
+				<a href="#modal" class="main-button main-button_popup main-button_grid-area">Заказать</a>
+
+				<div class="about-block__img"></div>
+
+				<ul class="about-block__list detailed-info-list">
+					<div class="product-popup__h3">Технические характеристики</div>
+					<li class="detailed-info-list__li">Цвет:   белый</li>
+					<li class="detailed-info-list__li">Фракция наполнителя не более:  0,2мм</li>
+					<li class="detailed-info-list__li">Температура выполнения работ:  от +5 до +35 оС</li>
+					<li class="detailed-info-list__li">Количество воды на 1 кг сухой смеси:  0,5 л</li>
+					<li class="detailed-info-list__li">Толщина слоя:  до 50 мм</li>
+					<li class="detailed-info-list__li">Жизнеспособность раствора:  60 минут</li>
+					<li class="detailed-info-list__li">Время высыхания слоя толщиной 3 мм.:  около 6 часов</li>
+					<li class="detailed-info-list__li">Прочность на сжатие не менее:  20 кг/см²</li>
+					<li class="detailed-info-list__li">Прочность сцепления не менее:  4,0 кг/см²</li>
+					<li class="detailed-info-list__li">Масса нетто:  25 кг ±2%</li>
+
+				</ul>
+
+
+				<div class="about-block-info product-description">
+					<div class="product-popup__h3">Выполнение работ</div>
+					<div class="product-description__p">Штукатурный раствор наносится в течении 20 мин на подготовленную поверхность при помощи кельмы, после чего поверхность разравнивают правилом. Допускается толщина слоя до 50 мм за один проход. После начала схватывания поверхность штукатурки необходимо слегка увлажнить и загладить металлической теркой. При большой толщине слоя, необходимо проводить оштукатуривание  поверхности за два прохода, после полного высыхания первого слоя. Чтобы добиться глянцевой поверхности, необходимо в течении суток, но не ранее 3-х часов после замешивания раствора, штукатурку вновь повторно обильно увлажнить и загладить. Поверхность готова для покраски без предварительного шпаклевания.</div>
+				</div>
+				
+			</div>
+
+			<div class="product-popup__right about-block">
+				<div class="product-popup__h3">Назначение</div>
+				<div class="product-description__p">Штукатурка гипсовая  «РАДИКС» предназначена для выравнивания поверхностей стен и потолков из различных материалов при производстве внутренних отделочных работ. Оштукатуренная поверхность затирается до глянца, что исключает потребность в шпаклевании.
+				</div>
+
+				<div class="product-popup__h3">Основания</div>
+				<div class="about-block__p">Применяется по бетонным основаниям, гипсовым и цементным штукатуркам, газо-и пенобетону, ГКЛ, ГВЛ, ПГП, любым другим гипсовым и цементным поверхностям.</div>
+
+				<div class="product-popup__h3">Подготовка поверхности</div>
+				<div class="about-block__p">Поверхность основания должна быть прочной, сухой, тщательно обеспыленной,  обезжиренной и обладать несущей способностью. Для улучшения сцепления с основанием, его поверхность рекомендуется прогрунтовать  в один-два слоя.  Основание готово к производству работ только после полного высыхания грунтовки. Выбор грунтовки  осуществляется в соответствии с типом основания.
+				</div>
+
+				<div class="product-popup__h3">Приготовление раствора
+				</div>
+				<div class="about-block__p">Сухую смесь «РАДИКС» засыпать в чистую емкость  и добавить водопроводную воду (температура воды от +5 до +20 ºС) в пропорции  на 1 кг смеси   0,5 литра  воды  ( на 1 мешок 30 кг 15 л  воды)  Перемешать с помощью профессионального миксера или дрели с насадкой на малых оборотах в течение 3-5 минут до получения однородной массы. Приготовленная порция раствора должна быть израсходована в течение 60 минут. </div>
+
+				<div class="product-popup__h3">Состав</div>
+				<div class="about-block__p">гипс, известь гидратная, химические добавки</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<header id="header" class="header">
+		<div class="header_container">
+
+ 			<div class="header__burger burger-block">
+ 				<div class="burger-block__elem"></div>
+ 				<div class="burger-block__elem"></div>
+			</div>
+
+			<div class="header__title">
+				<h1 class="header__h1">Радикс</h1>
+				<h4 class="header__h4">Завод сухих строительных смесей</h4>
+				<div class="plc"></div>
+			</div>
+			
+			<div class="header__footer product-info">
+
+				<div class="product-info__scroll scroll-block">
+					<a href="#whoAreWe" class="scroll-block__link"></a>	
+				</div>
+				
+				<div class="product-info__links">
+					<a href="#p3" class="product-info__button main-button" id="top-button">Выбрать продукцию</a>
+					<a href="#p4" class="product-info__getPrices">Узнать цены</a>
+				</div>
+
+				<div class="product-info__phone phone-block">
+					<span class="phone-block__text">+7(4722)22-50-51, +7(961)171-55-11</span>
+				</div>
+			</div>
+
+		</div>
+	</header>
+
+
+	<section class="whoAreWe" id="whoAreWe" data-scroll="theme-onscroll" >
+		<div class="whoAreWe_container"  id="p1">
+			
+			<div class="whoAreWe__image"></div>
+			<div class="whoAreWe__text text-block">
+				<h1 class="text-block__h1">Кто мы?</h1>
+				<p class="text-block__p">«<span class="bold">Радикс</span>» - динамично развивающаяся компания, специализирующаяся на производстве и продаже сухих строительных смесей.
+				</p>
+				<p class="text-block__p">
+				Основные производственные мощности, складски
+				е комплексы  и научно-техническая база компании ООО «Радикс» располагаются в Белгородской области (п.Политотдельский).
+				</p>
+				<p class="text-block__p">
+				Развивая интегрированную систему производства, научную базу, логистический сервис, современную систему продаж и маркетинговых коммуникаций, компания «ООО «Радикс» стремится оперативно и комплексно удовлетворять растущий спрос на качественные отделочные материалы.</p>
+				<p class="text-block__p">
+				Компания располагает собственным производством, современными технологическими линиями складскими комплексами, лабораторией проверки качества и совершенствования рецептур- что позволяет активно изучать рынок, мобильно реагировать на его изменения и запросы, поддерживать высокое качество и узнаваемость марки, укреплять доверие профессионалов, развивать широкую сеть партнерских и клиентских связей.
+				</p>	
+			</div>
+			<div class="whoAreWe__image-mobile"></div>
+
+
+		</div>
+	</section>
+
+	
+
+	<section class="webetter" id="webetter" data-scroll="theme-onscroll" >
+		<div class="webetter_container">
+				
+			<div class="webetter__title">
+				<div class="webetter__h1">Чем мы лучше?</div>
+				<div class="webetter__p">Продукция с маркой «Радикс» изготавливается только из высококачественного сырья и  имеет надежную,удобную упаковку.</div>
+			</div>
+
+			<div class="webetter__icons">
+
+				<div class="icons-item">
+					<div class="icons-item__title">Cобственное<br>
+						современное производство</div>
+					<div class="icons-item__svg"></div>
+				</div>
+
+				<div class="icons-item">
+					<div class="icons-item__title">Сырье<br>
+						прошедшее  кoнтрoль</div>
+					<div class="icons-item__svg"></div>
+				</div>
+
+				<div class="icons-item">
+					<div class="icons-item__title">Cотрудничество<br>
+						с компаниями всех регионов России</div>
+					<div class="icons-item__svg"></div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+
+
+	<section class="numbers" id="numbers" data-scroll="theme-onscroll" >
+		<div class="numbers_container">
+				
+			<div class="numbers__title">
+				<div class="numbers__h1">В цифрах</div>
+				<div class="numbers__p">Цифры расскажут о Радикс больше, чем любая рекламная статья.</div>
+			</div>
+
+			<div class="numbers__block">
+
+				<div class="icons-v2-item">
+				  <div class="icons-v2-item__h3">10</div>
+				  <div class="icons-v2-item__title">более 
+						10 отгрузок готовой продукции в день</div>
+				</div>
+
+				<div class="icons-v2-item">
+				  <div class="icons-v2-item__h3">500</div>
+				  <div class="icons-v2-item__title">более 
+						500 тонн сырья в месяц</div>
+				</div>
+
+				<div class="icons-v2-item">
+				  <div class="icons-v2-item__h3">50</div>
+				  <div class="icons-v2-item__title">Более
+						50 постоянных оптовых клиентов</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+
+	<section class="feedback" id="feedback" data-scroll="theme-onscroll" >
+		<div class="feedback_container" id="p2">
+			
+			<div class="feedback__title">
+				<div class="feedback__h1">Что говорят?</div>
+			</div>
+				
+				<!-- testimonials begin -->
+				<div class="tsl">
+				  <ul class="tsl-list">
+				    <li class="tsl-item">
+				      
+							<div class="tsl-wrapper">
+					      <h4 class="tsl-header">Сергей Васильев<br><span class="tsl-header-small">покупатель</span></h4>
+								<p class="tsl-content">Радикс стал новой для российского рынка системой. Жирмунский, однако, настаивал, что познание текста вразнобой интегрирует сюжетный полифонический роман. Стихотворение притягивает мифологический стих.</p>
+							</div>
+
+
+							<div class="tsl-wrapper">
+								<h4 class="tsl-header">Радикс</h4>
+								<p class="tsl-content">Жирмунский, однако, настаивал, что познание текста вразнобой интегрирует сюжетный полифонический роман. Стихотворение притягивает мифологический стих. Правило альтернанса стабильно. Синхрония прекрасно диссонирует гекзаметр.</p>
+							</div>
+				      
+				    </li>
+				    <li class="tsl-item">
+
+							<div class="tsl-wrapper">
+				      	<h4 class="tsl-header">### Header ###<span class="tsl-header-small">ceeeerrr</span></h4>
+								<p class="tsl-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam corrupti inventore explicabo esse repudiandae quis, minus, earum molestiae iure cumque enim quam aliquid aspernatur voluptatem dolores sapiente nesciunt architecto voluptatibus!</p>
+							</div>
+							<div class="tsl-wrapper">
+								<h4 class="tsl-header">$$$ Header $$$</h4>
+								<p class="tsl-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid cum maxime maiores est velit quas non accusamus, in nulla, rerum dolores porro eaque hic, fugit quidem quaerat minima magnam. Inventore!</p>
+							</div>
+
+				    </li>
+				    <li class="tsl-item">
+							<div class="tsl-wrapper">
+				      	<h4 class="tsl-header">$$$ 222222 $$$<span class="tsl-header-small">aaaaaaa</span></h4>
+								<p class="tsl-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas ut dolor dolore incidunt porro aspernatur, atque nam quo, nobis recusandae beatae commodi error aut eum aliquam. Labore ipsa itaque deserunt voluptatibus blanditiis temporibus facere est.</p>
+							</div>
+
+							<div class="tsl-wrapper">
+								<h4 class="tsl-header">### 11111 ###<span class="tsl-header-small">443434</span></h4>
+								<p class="tsl-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, dolorem, eaque! Maiores consequatur quidem, illum error labore laboriosam fuga maxime! A, placeat? Illo, laboriosam beatae nihil voluptatum quis veniam delectus?</p>
+							</div>
+
+
+				    </li>
+				    <li class="tsl-item">
+							<div class="tsl-wrapper">
+				      	<h4 class="tsl-header">$$$ 3333 $$$</h4>
+								<p class="tsl-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas ut dolor dolore incidunt porro aspernatur, atque nam quo, nobis recusandae beatae commodi error aut eum aliquam. Labore ipsa itaque deserunt voluptatibus blanditiis temporibus facere est.</p>
+							</div>
+
+							<div class="tsl-wrapper">
+								<h4 class="tsl-header">### 44444 ###</h4>
+								<p class="tsl-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, dolorem, eaque! Maiores consequatur quidem, illum error labore laboriosam fuga maxime! A, placeat? Illo, laboriosam beatae nihil voluptatum quis veniam delectus?</p>
+							</div>
+
+
+				    </li>
+				    <li class="tsl-item">
+							<div class="tsl-wrapper">
+				      	<h4 class="tsl-header">$$$ adsasdadsasd $$$<span class="tsl-header-small">lasttt</span></h4>
+								<p class="tsl-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas ut dolor dolore incidunt porro aspernatur, atque nam quo, nobis recusandae beatae commodi error aut eum aliquam. Labore ipsa itaque deserunt voluptatibus blanditiis temporibus facere est.</p>
+							</div>
+
+							<div class="tsl-wrapper">
+								<h4 class="tsl-header">### 44444 ###<span class="tsl-header-small">покупатель</span></h4>
+								<p class="tsl-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, dolorem, eaque! Maiores consequatur quidem, illum error labore laboriosam fuga maxime! A, placeat? Illo, laboriosam beatae nihil voluptatum quis veniam delectus?</p>
+							</div>
+
+
+				    </li>
+				  </ul>
+				</div>
+				<!-- testimonials end -->
+				
+			<a href="#" id="mod-feed" class="main-button main-button_block-centered">Добавить отзыв</a>	
+		</div>
+	</section>
+
+	<div class="productionScroll" id="p3"></div>
+	<section class="production" id="production" data-scroll="theme-onscroll" >
+		<div class="production_container">
+
+			<h1 class="production__h1">Продукция</h1>
+
+			<div class="production-block">
+
+				<div class="production-block__item">
+					<div class="production-block__img" style="background-image: url(img/prod-1.jpg)"></div>
+					<div class="production-block__title">Штукатурка гипсовая</div>
+					<a href="#modal" class="main-button main-button_block-centered">Заказать
+					</a>
+				</div>
+
+				<div class="production-block__item">
+					<div class="production-block__img" style="background-image: url(img/prod-2.jpg)"></div>
+					<div class="production-block__title">Штукатурка гипсовая</div>
+					<a href="#modal" class="main-button main-button_block-centered">Заказать
+					</a>
+				</div>
+
+				<div class="production-block__item">
+					<div class="production-block__img" style="background-image: url(img/prod-3.jpg)"></div>
+					<div class="production-block__title">Штукатурка гипсовая</div>
+					<a href="#modal" class="main-button main-button_block-centered">Заказать
+					</a>
+				</div>
+
+				<div class="production-block__item">
+					<div class="production-block__img" style="background-image: url(img/prod-4.jpg)"></div>
+					<div class="production-block__title">Штукатурка гипсовая</div>
+					<a href="#modal" class="main-button main-button_block-centered">Заказать
+					</a>
+				</div>
+
+			</div>
+		</div>
+	</section>	
+
+	<section class="slider-product" id="slider-production">
+		<div class="slider_container">
+
+		<div class="production_container">
+
+			<h1 class="production__h1">Продукция</h1>			
+
+			<div class="slider-block">
+				<div class="production-block__item">
+								<div class="production-block__img" style="background-image: url(img/prod-1.jpg)"></div>
+								<div class="production-block__title">Штукатурка гипсовая</div>
+							</div>
+				
+							<div class="production-block__item">
+								<div class="production-block__img" style="background-image: url(img/prod-2.jpg)"></div>
+								<div class="production-block__title">Штукатурка гипсовая</div>
+							</div>
+				
+							<div class="production-block__item">
+								<div class="production-block__img" style="background-image: url(img/prod-3.jpg)"></div>
+								<div class="production-block__title">Штукатурка гипсовая</div>
+							</div>
+				
+							<div class="production-block__item">
+								<div class="production-block__img" style="background-image: url(img/prod-4.jpg)"></div>
+								<div class="production-block__title">Штукатурка гипсовая</div>
+							</div>
+			</div>
+			<a href="#modal" class="main-button main-button_block-centered">Заказать</a>
+
+		</div>
+
+
+		</div>
+	</section>
+
+
+	<section class="production" id="production-glue" data-scroll="theme-onscroll" >
+		<div class="production_container">
+			
+					<h1 class="production__h1">Продукция/<span class="production__h1_small-grey">Клей</span></h1>
+			
+					<div class="production-block">
+			
+						<div class="production-block__item">
+							<div class="production-block__img" style="background-image: url(img/prod-5.jpg)"></div>
+						</div>
+			
+						<div class="production-block__item">
+							<div class="production-block__img" style="background-image: url(img/prod-6.jpg)"></div>
+						</div>
+			
+						<div class="production-block__item">
+							<div class="production-block__img" style="background-image: url(img/prod-7.jpg)"></div>
+						</div>
+			
+						<div class="production-block__item">
+							<div class="production-block__img" style="background-image: url(img/prod-8.jpg)"></div>
+						</div>
+			
+					</div>
+		</div>
+	</section>
+
+	<section class="slider-glue" id="slider-glue">
+		<div class="production_container">
+			
+		<h1 class="production__h1">Продукция/<span class="production__h1_small-grey">Клей</span></h1>
+			<div class="slider_container">
+				
+			<div class="slider-block">
+							<div class="production-block__item">
+								<div class="production-block__img" style="background-image: url(img/prod-5.jpg)"></div>
+							</div>
+				
+							<div class="production-block__item">
+								<div class="production-block__img" style="background-image: url(img/prod-6.jpg)"></div>
+							</div>
+				
+							<div class="production-block__item">
+								<div class="production-block__img" style="background-image: url(img/prod-7.jpg)"></div>
+							</div>
+				
+							<div class="production-block__item">
+								<div class="production-block__img" style="background-image: url(img/prod-8.jpg)"></div>
+							</div>
+			</div>
+			<a href="#modal" class="main-button main-button_block-centered">Заказать</a>
+			</div>
+		</div>
+
+
+
+		</div>
+	</section>
+
+	
+	<!-- Get Prices Section -->
+
+	<section class="get-prices" id="get-prices" data-scroll="theme-onscroll" >
+		<div class="get-prices_container"  id="p4">
+
+			<div class="get-prices-block">
+				<div class="get-prices-block__h1">Узнать цены</div>
+				<p class="get-prices-block__p">Цены на продукция марки «Радикс» можно узнать несколькими способами, оставить заявку с сайта и менеджер вам прищлет его на указанный адрес, заказать услугу обратный звонк с сайта или позвонить по телефону +7(4722)22-50-51, +7(961)171-55-11. </p>
+			</div>
+	
+			<a href="#modal" class="main-button main-button_theme-orange">Мелкий опт<div class="test"></div></a>
+			<a href="#modal" class="main-button main-button_theme-purple">Оптовый прайс-лист</a>
+		</div>
+	</section>
+
+	<!-- Get Prices Section End -->
+
+	
+	<section class="production" id="production-certs" data-scroll="theme-onscroll">
+		<div class="production_container">
+			
+					<h1 class="production__h1">Сертификаты</h1>
+			
+					<div class="production-block production-block_grid5">
+			
+						<div class="production-block__item">
+							<div class="production-block__img" style="background-image: url(img/cert-1.jpg)"></div>
+						</div>
+			
+						<div class="production-block__item">
+							<div class="production-block__img" style="background-image: url(img/cert-2.jpg)"></div>
+						</div>
+			
+						<div class="production-block__item">
+							<div class="production-block__img" style="background-image: url(img/cert-3.jpg)"></div>
+						</div>
+			
+						<div class="production-block__item">
+							<div class="production-block__img" style="background-image: url(img/cert-4.jpg)"></div>
+						</div>
+
+						<div class="production-block__item">
+							<div class="production-block__img" style="background-image: url(img/cert-5.jpg)"></div>
+						</div>
+			
+					</div>
+		</div>
+	</section>
+
+	<section class="slider-certs" id="slider-certs" data-scroll="theme-onscroll" >
+		<div class="production_container">
+			
+			<h1 class="production__h1">Сертификаты</h1>
+			<div class="slider_container">
+			
+
+			<div class="slider-block">
+				<div class="production-block__item">
+								<div class="production-block__img" style="background-image: url(img/cert-1.jpg)"></div>
+							</div>
+				
+							<div class="production-block__item">
+								<div class="production-block__img" style="background-image: url(img/cert-2.jpg)"></div>
+							</div>
+				
+							<div class="production-block__item">
+								<div class="production-block__img" style="background-image: url(img/cert-3.jpg)"></div>
+							</div>
+				
+							<div class="production-block__item">
+								<div class="production-block__img" style="background-image: url(img/cert-4.jpg)"></div>
+							</div>
+
+							<div class="production-block__item">
+								<div class="production-block__img" style="background-image: url(img/cert-5.jpg)"></div>
+							</div>
+			</div>
+		</div>
+
+
+
+		</div>
+	</section>
+	
+
+	<section class="contacts" id="contacts" data-scroll="theme-onscroll" data-scroll="theme-onscroll">
+		<div class="contacts_container">
+			<h1 class="contacts__h1">Контакты</h1>
+		</div>
+
+		
+		<div class="contacts__google-map">
+		<!-- 	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24332.84790619462!2d36.39799353572755!3d50.47322478800692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4126464e6854b553%3A0x32421fb10b28f30e!2z0J_QvtC70LjRgtC-0YLQtNC10LvRjNGB0LrQuNC5LCDQkdC10LvQs9C-0YDQvtC00YHQutCw0Y8g0L7QsdC7LiwgMzA4NTg2!5e0!3m2!1sru!2sru!4v1538489355639" class="google-iframe" frameborder="0" style="border:0"></iframe> -->
+		<div class="plc-foot"></div>
+		<div id="map"></div>
+
+	
+			<div class="contacts__contact-info">
+
+
+					<div class="social-block social-block_position-abs">
+						<div class="social-block__circle"><a onclick="$('#modal1').modal('open');" class="social-block__img-email modal-trigger"></a></div>
+						<div class="social-block__circle"><a class="social-block__img-phone" id="phone-input-contacts"></a></div>
+					</div>
+				
+					<div class="contacts__address main-address main-address_position-abs">
+						<p class="main-address__text">
+						+7(4722)22-50-51, +7(961)171-55-11</p>
+
+						<p class="main-address__text">
+						308586, Белгородская область, 	
+						Белгородский район, 
+						пос. Политотдельский</p>
+
+						<p class="main-address__text">
+						sssradix@mail.ru 
+						u.bronnikov@mail.ru</p>
+			</div>
+
+		</div>
+
+	</section>
+
+	<footer id="footer" class="footer">
+		<div class="footer_container">
+			
+			<div class="footer__h3">Радикс 2013-2018</div>
+			<p class="footer__p">Завод сухих строительных смесей ©</p>
+
+		</div>
+	</footer>
+
+
+
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDF_rg2ZfNhSmffZu5w6OgErKCFJi_goI8&callback=initMap"> </script>
+</body>
+</html>
+
+

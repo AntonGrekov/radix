@@ -1,0 +1,603 @@
+// @import "fonts"
+@import "http://fonts.fontstorage.com/import/montserratalternates.css"
+@import "base"
+@import "vars"
+@import "popup"
+@import "animation"
+
+
+
+
+.header
+	height: 100vh
+	position: relative
+	
+	&_container
+
+	&__title
+		background: url(../img/header-bg.jpg), url(../img/header-bg.jpg)
+		background-size: 100% 100%
+		background-repeat: no-repeat
+		position: relative
+		padding: 20vh 10vw 0
+		height: 88vh
+		
+
+		&::after
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			background: #000
+			opacity: 0.40
+
+	&__h1
+		position: relative
+		z-index: 1
+		font-size: 200px
+		color: #fff
+		font-weight: normal
+		letter-spacing: .1em
+		padding: 0
+		margin: 0	
+
+	&__h4
+		position: relative
+		z-index: 1
+		font-size: 38px
+		letter-spacing: .1em
+		padding: 0 20px
+		margin: 10px 0
+		font-weight: normal
+		color: $main
+		text-shadow: 1px 1px 0 black, 0px 4px 4px rgba(0, 0, 0, 0.25)
+
+	&__footer	
+		height: 12vh
+		background: #fff
+
+.product-info
+	display: grid
+	grid-template-columns: 10% 570px 1fr
+	grid-template-areas: "scroll getprices phone"
+	align-content: center
+	align-items: center
+	justify-content: center
+
+	&__links
+		grid-area: getprices
+		text-align: center
+
+	&__getPrices
+		display: inline-block
+		text-decoration: none
+		color: $grey
+
+		&:before
+			display: inline-block
+			content: ''
+			background: $grey
+			height: 2px
+			width: 20px
+			transform: rotate(-45deg)
+			position: relative
+			right: 25px
+			bottom: 5px
+
+	&__phone
+		font-size: 24px
+		font-weight: 800
+		font-family: 'Montserrat Alternates'
+		color: $grey
+
+.phone-block
+	grid-area: phone
+	text-align: right
+	padding-right: 50px
+
+
+.scroll-block__link
+	grid-area: scroll
+	margin: 0 auto
+	display: block
+	background: url(../img/scroll-icon.jpg)
+	background-size: 100% 100%
+
+	width: 31px
+	height: 20.5px			
+
+
+.main-button
+	cursor: pointer
+	text-decoration: none
+	display: inline-block
+	text-align: center
+	line-height: 65px
+	width: 338px
+	height: 65px
+	color: #fff
+	letter-spacing: .1em
+	border-radius: 30px
+	background: #000
+	font-family: inherit
+	font-size: 20px
+	margin-right: 71px
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border: none
+	transition: .5s all
+
+
+	&:hover
+		width: 288px
+		height: 65px
+		color: $main
+	&_popup
+		display: inline-block
+		vertical-align: top
+		margin-left: 3vh
+	&_grid-area
+		grid-area: button
+
+.header__burger
+	position: fixed
+	top: 50px
+	left: 1vw
+	z-index: 1
+
+.burger-block
+	cursor: pointer
+
+	&:hover .burger-block__elem:nth-child(1)
+		transform: translateY(-10px)
+	&:hover .burger-block__elem:nth-child(2)
+		transform: translateY(10px)
+		
+		
+
+.burger-block__elem
+	width: 40px
+	height: 5px
+	background: #fff
+	transition: transform 1s ease
+
+.burger-block__elem:nth-child(2)
+	margin-top: 15px
+
+
+
+/* modifier for button to center it via margin: 0 auto */
+.main-button_block-centered
+	display: block
+	margin: 0 auto
+
+.main-button_theme-orange
+	box-shadow: 0px 4px 10px 2px #FB992E
+	
+
+.main-button_theme-purple
+	box-shadow: 0px 5px 12px 2px #632EFB
+
+
+
+
+	/* Who Are We Section */
+
+.whoAreWe_container, .webetter_container, .numbers_container, .feedback_container
+	padding: 15px $left-padding
+
+
+.whoAreWe__image
+	height: 889px
+	width: 564px
+	background: url(../img/who-we-are.png)
+	float: left
+	
+
+	&-mobile
+		display: none
+		background-image: url(../img/who-we-are.png)
+		background-size: contain
+		margin: 0 auto
+		width: 200px
+		height: 300px
+
+
+.whoAreWe__text
+	margin-left: calc(564px + 12vw)
+	width: 55%
+
+.text-block__h1
+	padding: 82px 0 50px
+	font-size: 90px
+	color: #000
+	font-weight: normal
+
+.text-block__p
+	font-size: 20px
+	margin: 20px 0
+	line-height: 1.7em
+
+
+.bold
+	font-weight: 800
+	font-size: 24px
+
+
+
+
+.propagation-menu
+	display: none
+	position: fixed
+	top: 22vh
+	left: 1.5vw
+	background: none
+	z-index: 1
+	margin: 0
+	padding: 0
+	list-style: none
+	text-align: right
+
+	&__el:hover
+		opacity: 1
+	&__el:hover:before
+		opacity: 1
+		background: #000
+	&__el:hover &__link
+		color: #000
+	&__el.active
+		opacity: 1
+	&__el.active &__link
+		color: #000
+		font-weight: bold
+		text-decoration: underline
+	&__el.active:before
+		background: #000
+		opacity: 1
+	&__link
+		text-decoration: none
+		color: #909090
+	&__el
+		font-family: inherit
+		font-weight: 800
+		padding: 20px 0
+		margin: 0
+		width: 35px
+		height: 18px
+		position: relative
+		font-size: 20px
+		opacity: 1
+	&__el:before
+		content: ''
+		position: absolute
+		width: 8px
+		height: 8px
+		background: #000
+		left: -10px
+		bottom: 4px
+		border-radius: 100%
+	&__el:nth-child(even):before
+		background: $grey
+
+
+/* We Better Section + Numbers */
+
+
+
+.webetter, .numbers, .feedback
+	&__title
+		margin-left: calc(564px + 12vw)
+	&__h1
+		font-weight: 500
+		line-height: normal
+		font-size: 90px
+		letter-spacing: 0.1em
+	&__p
+		margin-top: 20px
+		font-size: 18px
+		letter-spacing: 0.1em
+		line-height: 1.3em
+
+.webetter__icons
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+
+	flex-direction: row
+	justify-content: center
+	align-items: center
+	padding: 20px
+	margin-top: 40px
+	margin-left: -$left-padding
+
+.icons-item
+
+	margin: 10px 110px
+	width: 33%
+	
+	
+	&__title
+		font-size: 18px
+		text-align: center
+		padding: 0 0 25px
+		font-weight: 500
+		letter-spacing: 0.1em
+
+	&__svg
+		margin: 0 auto
+
+
+.icons-item:nth-child(1)
+	.icons-item__svg
+		background: url(../img/factory.svg) no-repeat
+		height: $size-x
+		width: $size-y
+.icons-item:nth-child(2)
+	.icons-item__svg
+		background: url(../img/controls.svg) no-repeat
+		height: $size-x
+		width: $size-y
+.icons-item:nth-child(3)
+	.icons-item__svg
+		background: url(../img/cath.svg) no-repeat 
+		height: $size-x
+		width: $size-y
+
+
+
+/* Numbers Section */
+.numbers__block
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-direction: row
+	justify-content: center
+	align-items: center
+	padding: 20px
+	margin-top: 40px
+	text-align: center
+	margin-left: -$left-padding
+.icons-v2-item
+	margin: 10px 110px
+	width: 430px
+	&__h3
+		font-weight: 500
+		font-size: 90px
+		position: relative
+		&:after
+			content: ''
+			position: absolute
+			width: 50%
+			height: 5px
+			background-color: $main
+			bottom: -10px
+			left: 25%
+	&__title
+		font-size: 18px
+		text-align: center
+		font-weight: 500
+		letter-spacing: 0.1em
+		margin-top: 37px
+
+/* Feedback Section */ 
+
+
+.feedback
+	background-color: #E9E9E9
+
+.feedback_container
+	padding-bottom: 30px
+
+
+/* Production */
+.production_container
+	padding: 3vw
+	text-align: center
+
+.production-block
+	display: grid
+	grid-template-columns: repeat(4, 1fr)
+	&_grid5
+		display: grid
+		grid-template-columns: repeat(5, 1fr)
+	&__item
+		margin: 0 auto
+	&__img
+		width: 290px
+		height: 450px
+		margin: 0 auto
+		cursor: pointer
+		background-repeat: no-repeat
+	&__title
+		font-size: 24px
+		margin: 40px 0
+
+
+.production__h1
+	font-weight: 500
+	line-height: normal
+	font-size: 90px
+	margin-bottom: 50px
+	letter-spacing: 0.1em
+
+
+.production__h1_small-grey
+	font-weight: 500
+	line-height: normal
+	font-size: 90px
+	color: $grey
+
+
+	/* Get Prices Section */
+
+.get-prices
+
+	background-color: #E9E9E9
+	text-align: center
+
+	&_container
+		padding: 20px 0 40px
+
+.get-prices-block
+	margin-bottom: 45px
+
+	&__h1
+		font-weight: 500
+		line-height: normal
+		font-size: 90px
+		letter-spacing: 0.1em
+		margin: 0
+
+	&__p
+		line-height: 33px;
+		font-size: 18px;
+		width: 45%
+		text-align: left
+		margin: 0 auto
+
+/* Contacts */
+
+.contacts
+	text-align: center
+	&_container
+
+
+	&__h1
+		font-weight: 500
+		line-height: normal
+		font-size: 90px
+		margin-bottom: 50px
+		letter-spacing: 0.1em
+
+	&__google-map
+		position: relative
+	#map
+		height: 500px
+		width: 100%
+
+.main-address
+	width: 500px
+	font-weight: bold
+	font-size: 24px
+	letter-spacing: 0.1em
+	color: #6B6B6B
+	text-align: left
+
+	&__text
+		margin: 30px 0
+
+	&_position-abs
+		position: absolute
+		right: 15%
+		bottom: 1%
+	&_position-margin
+		margin-top: 15vh
+
+	&_color-white
+		color: #fff
+
+
+.social-block
+
+	&_position-abs
+		position: absolute
+		top: 3%
+		right: 25%
+
+	&__circle
+		cursor: pointer
+		display: inline-block
+		border-radius: 100%
+		height: 100px
+		width: 100px
+		background: #fff
+		text-align: center
+		box-shadow: 0px 14px 14px rgba(0, 0, 0, 0.237602), 0px 0px 14px rgba(0, 0, 0, 0.12);
+
+		&:first-child
+			margin-right: 70px
+
+	&__img-phone
+		display: inline-block
+		background: url(../img/phone.svg) no-repeat
+		height: 50px
+		width: 50px
+		transform: translateY(50%)
+	&__img-email
+		display: inline-block
+		background: url(../img/email.svg) no-repeat
+		height: 50px
+		width: 50px
+		transform: translateY(60%)
+
+/* Footer Section */
+.footer
+	&_container
+		padding: 20px 99px 13px
+
+
+.footer__h3
+	color: #9C9C9C
+	font-size: 36px
+	letter-spacing: 0.1em
+
+.footer__p
+	font-size: 14px
+	color: #9C9C9C
+	letter-spacing: 0.1em
+
+
+
+/* Section tracker for burger and propagation color changes */
+.plc, .plc-foot
+	position: absolute
+	bottom: 3%
+	left: 1%
+	background: #333
+	color: #fff
+	width: 10px
+	height: 10px
+	visibility: hidden
+
+.google-iframe
+	width: 100%
+	height: 621px
+
+
+//sliders 
+
+.slider-product, .slider-glue, .slider-certs
+	display: none
+
+
+.slick-current
+	position: relative
+	text-align: center
+
+.slick-current:before, .slick-current:after
+	content: '<'
+	position: absolute
+	font-size: 50px
+	width: 10px
+	height: 10px
+
+.slick-current:before
+	left: -3%
+	top: 35%
+
+.slick-current:after
+	content: '>'
+	right: 12%
+	top: 35%
+
+
+.productionScroll
+	visibility: hidden	
+
+
+@import "media"

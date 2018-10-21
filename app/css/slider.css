@@ -1,0 +1,160 @@
+/* this is our container. Lets imagine, that it is our sidebar where we want to put testimonials */
+.container {
+}
+
+
+/* testimonials slider geometry */
+.tsl {
+	padding: 1em;
+	cursor: pointer;
+}
+
+.tsl-list {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	position:relative;
+	overflow:hidden;
+	height: 220px;
+}
+.tsl-item {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-direction: column;
+
+	position:absolute;
+	top:0;
+	left:0;
+	animation: tsl-fade-in-out 25s infinite;
+	animation-play-state:running;
+
+}
+
+.tsl-wrapper {
+	margin: 10px 0;
+}
+
+
+.tsl-header {
+	display: inline-block;
+	vertical-align: top;
+
+	margin-right: 74px;
+
+	font-weight: 600;
+	font-size: 20px;
+	letter-spacing: 0.1em;
+	width: 15%;
+
+}
+
+.tsl-header-small {
+	font-size: 12px;
+	letter-spacing: 0.1em;
+
+
+	color: #A1A1A1;
+	display: block;
+}
+
+.tsl-content {
+	display: inline-block;
+	width: 70%;
+	font-size: 18px;
+
+	position: relative;
+	text-align: left;
+}
+
+.tsl-content:before, .tsl-content:after {
+	content: '';
+	position: absolute;
+	width: 27px;
+	height: 14px;
+	
+	background: url(../img/quotes.png) no-repeat;
+}
+
+.tsl-content:before {
+	left: -4%;
+	top: 7px;
+
+}
+
+.tsl-content:after {
+	right: -2%;
+	top: 7px;
+
+}
+
+/* lets hide all items from second */
+.tsl-item + .tsl-item {
+	opacity:0;
+}
+
+/* animation */
+
+/* animation shift */
+/* negative delay needed to pause works correctly on hover */
+.tsl-item:nth-child(2) {
+	animation-delay: -20s;
+}
+.tsl-item:nth-child(3) {
+	animation-delay: -15s;
+}
+.tsl-item:nth-child(4) {
+	animation-delay: -10s;
+}
+.tsl-item:nth-child(5) {
+	animation-delay: -5s;
+}
+/*
+we have 5 items.
+we want each slide plays ≈5s
+
+each slide will play 1/5 of animation = 20%
+1% of animation is for transitions (fading)
+*/
+
+@keyframes tsl-fade-in-out {
+	0% {
+		opacity:0;
+		z-index:2;
+	}
+	1% {
+		opacity:1;
+		z-index:2;
+	}
+	20% {
+		opacity:1;
+	}
+	21% {
+		opacity:0;
+		z-index:1;
+	}
+	100% {
+		opacity:0;
+	}
+}
+
+/* pause on hover */
+.tsl-list:hover .tsl-item {
+	animation-play-state:paused;
+}
+
+/* testimonials theme */
+.tsl-content {
+	font-size: 18px;
+	line-height: 33px;
+	letter-spacing: 0.1em;
+}
+.tsl-content p {
+	margin-top:0;
+}
+.tsl-meta {
+	font-size: 18px;
+	text-align: right;
+}

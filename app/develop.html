@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Developing HTML</title>
+		<link rel="stylesheet" href="bower_components/materialize/dist/css/materialize.css">	
+
+		<!-- Materialize -->
+	<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+	<script src="bower_components/materialize/dist/js/materialize.js"></script>
+
+
+
+	<style>
+		
+		body {
+			background-color: #1F2C50;
+			color: #fff;
+			height: 100vh;
+			width: 100%;
+			font-size: 20px;
+			font-family: verdana;
+
+
+		}
+
+		* {padding: 0; margin: 0;}
+
+		.header {
+			height: 100%;
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+
+			justify-content: center;
+			-ms-align-items: center;
+			align-items: center;
+
+			outline: 00px solid red;
+		}
+
+		.header_container {
+			width: 50%;
+			height: 50%;
+			background: #4065EE;
+			color: #fff;
+			margin: 0 auto;
+
+			position: relative;
+
+			/*position: absolute;
+			top: 50%;
+			left: 50%;*/
+
+			/*transform: translate(-50%, -50%);*/
+
+			outline: 5px solid aqua;
+		}
+
+
+
+	a { text-decoration: none; color: inherit; }
+
+	</style>
+</head>
+<body>
+	
+	<style>
+
+		.modal {width: 435px;}
+	
+		
+	
+	</style>
+
+	<header class="header">
+		
+		<div class="header_container">
+			
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. At repudiandae totam, reiciendis vero similique natus error molestiae distinctio debitis, eaque dolores ea, quibusdam possimus saepe facilis repellat quos hic animi sequi deserunt maiores modi blanditiis numquam dolorem? Labore dolores aliquid magni, asperiores ducimus suscipit officiis accusantium officia, maiores magnam, sit sequi eaque atque. Provident, tenetur ducimus neque dicta autem hic, voluptas vel qui amet cumque, libero, et maiores reprehenderit mollitia corrupti excepturi assumenda. Repudiandae, illo! Totam nesciunt ab libero repellat quibusdam sit labore sunt eos, voluptatem nobis incidunt sint et itaque doloremque quidem optio fugit, enim recusandae. Illo reprehenderit, incidunt?
+			<br /> 
+			<button class="btn "><a href="#modal1" class="modal-trigger">Модалка!</a></button>
+
+		</div>
+	</header>
+		
+
+		
+
+
+	
+<script> 
+
+	$(function() {
+
+
+
+
+		$('.modal').modal({
+
+			width: '300px'
+
+		});
+
+	});
+
+</script>
+
+</body>
+</html>
