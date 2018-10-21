@@ -1,7 +1,7 @@
 // Initialize and add the map
 function initMap() {
   // The location of Uluru
-  var radiks = {lat: 50.7917433, lng: 35.7860041};
+  var radiks = { lat: 50.468083, lng: 36.409915 };
 
   // The map, centered at Uluru
   var map = new google.maps.Map(
