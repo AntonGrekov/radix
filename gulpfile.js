@@ -1,19 +1,19 @@
-var 	gulp           = require('gulp'),
-		gutil          = require('gulp-util' ),
-		sass           = require('gulp-sass'),
-		del 				= require('del'),
-		browserSync    = require('browser-sync'),
-		concat         = require('gulp-concat'),
-		uglify         = require('gulp-uglify'),
-		cleanCSS       = require('gulp-clean-css'),
-		rename         = require('gulp-rename'),
-		imagemin 		= require('gulp-imagemin'),
-		png_quant 		= require('imagemin-pngquant'),
-		cache 			= require('gulp-cache'),
-		autoprefixer   = require('gulp-autoprefixer'),
-		notify         = require("gulp-notify");
-		jade			   = require("gulp-jade"),
-		imageop 			= require('gulp-image-optimization');
+var gulp             = require('gulp'),
+		gutil          	 = require('gulp-util' ),
+		sass           	 = require('gulp-sass'),
+		del 						 = require('del'),
+		browserSync    	 = require('browser-sync'),
+		concat           = require('gulp-concat'),
+		uglify           = require('gulp-uglify'),
+		cleanCSS         = require('gulp-clean-css'),
+		rename           = require('gulp-rename'),
+		imagemin 				 = require('gulp-imagemin'),
+		png_quant 			 = require('imagemin-pngquant'),
+		cache 					 = require('gulp-cache'),
+		autoprefixer     = require('gulp-autoprefixer'),
+		notify           = require("gulp-notify");
+		jade			   		 = require("gulp-jade"),
+		imageop 				 = require('gulp-image-optimization');
 
 
 
