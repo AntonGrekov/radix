@@ -868,6 +868,10 @@
 	.contacts
 		.main-address
 			display: none
+
+	.social-block
+		&_position-abs
+			top: 13%
 	.product-popup
 		&__back-button
 			top: 5%
@@ -881,6 +885,16 @@
 			position: absolute
 			right: 5%
 			top: 10%			
+	.contact-form
+		&__input 
+			height: 2rem
+			font-size: 10px
+		&__input:focus
+			outline: none
+
+		&_active &__label 
+			transform: translateY(-135%)
+			font-size: 10px
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
@@ -1181,6 +1195,7 @@
 			position: absolute
 			right: 5%
 			top: 10%
+	
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
@@ -1198,6 +1213,9 @@
 
 	.modal
 		width: 280px
+	
+
+			
 
 /*==========  Mobile First  ==========*/
 

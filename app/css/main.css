@@ -295,7 +295,8 @@ h1, h2, h3, h4, h5, p {
     height: 50px;
     font-size: 20px;
     width: 100%;
-    position: relative; }
+    position: relative;
+    outline: none; }
   .contact-form__h4 {
     display: block;
     font-size: 1.9rem;
@@ -1536,6 +1537,8 @@ h1, h2, h3, h4, h5, p {
     width: 100%; }
   .contacts .main-address {
     display: none; }
+  .social-block_position-abs {
+    top: 13%; }
   .product-popup {
     /* Modal Window - Форма связи */ }
     .product-popup__back-button {
@@ -1547,7 +1550,15 @@ h1, h2, h3, h4, h5, p {
     .modal-close {
       position: absolute;
       right: 5%;
-      top: 10%; } }
+      top: 10%; }
+  .contact-form__input {
+    height: 2rem;
+    font-size: 10px; }
+  .contact-form__input:focus {
+    outline: none; }
+  .contact-form_active .contact-form__label {
+    transform: translateY(-135%);
+    font-size: 10px; } }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
