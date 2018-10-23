@@ -28,6 +28,7 @@ h1, h2, h3, h4, h5, p {
 
 /* Menu Modal Window */
 .menu {
+  display: none;
   width: 100%;
   min-height: 100%;
   position: fixed;
@@ -1269,10 +1270,6 @@ h1, h2, h3, h4, h5, p {
     display: grid;
     justify-items: start;
     padding-top: 3vh; }
-    .menu__right .social-block_input .social-block__img-phone {
-      position: absolute;
-      left: 1vw;
-      background: url(../img/phone.svg) no-repeat; }
     .menu__right .social-block_input .social-block__phone-input {
       transition: .5s width;
       height: 50px;
@@ -1650,7 +1647,7 @@ h1, h2, h3, h4, h5, p {
   .social-block {
     margin-left: 0; }
     .social-block_position-abs {
-      top: 3%;
+      top: 13%;
       right: 8%; }
     .social-block__circle {
       height: 35px;
@@ -1703,11 +1700,6 @@ h1, h2, h3, h4, h5, p {
       width: 100%; }
   .social-block {
     margin-bottom: 0vh; }
-    .social-block_input .social-block__img-phone {
-      position: absolute;
-      left: 1vw;
-      background: url(../img/phone.svg) no-repeat;
-      background-size: 35px 35px; }
     .social-block_input .social-block__phone-input {
       transition: .5s width;
       height: 50px;
@@ -1782,11 +1774,6 @@ h1, h2, h3, h4, h5, p {
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {
-  .menu__right .social-block_input .social-block__img-phone {
-    position: absolute;
-    left: 1vw;
-    background: url(../img/phone.svg) no-repeat;
-    background-size: 35px 35px; }
   .menu__right .social-block_input .social-block__phone-input {
     height: 50px;
     width: 220px; }
