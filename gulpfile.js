@@ -1,12 +1,12 @@
 var gulp 					= require("gulp"),
-	browserSync			= require("browser-sync"),
+	browserSync				= require("browser-sync"),
 	// cssNano					= require("cssnano"),
 	sass						= require("gulp-sass"),
 	plumber					= require("gulp-plumber"),
 	gutil						= require("gulp-util"),
-	uglifyJs	    	= require("gulp-uglify-es").default,
+	uglifyJs	    			= require("gulp-uglify-es").default,
 	rename					= require("gulp-rename"),
-	pug							= require("gulp-pug"),	
+	pug						= require("gulp-pug"),	
 	concat					= require("gulp-concat");
 
 // Source code paths, build destination, other vars
@@ -21,7 +21,7 @@ var paths = {
 				},
 
 				styles: {
-					src: 'app/sass/*.+(sass|scss)',  	
+					src: 'app/sass/**/*.+(sass|scss)',  	
 					dest: 'app/css/'
 				}, 
 

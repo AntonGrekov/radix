@@ -883,14 +883,9 @@ h1, h2, h3, h4, h5, p {
     height: 526px;
     margin-right: 20px; }
   .detailed-info-list__h3 {
-    font-weight: 600;
-    line-height: normal;
-    font-size: 133px;
-    letter-spacing: 0.1em; }
+    font-size: 20px; }
   .detailed-info-list__li {
-    font-weight: 500;
-    line-height: normal;
-    font-size: 16px;
+    font-size: 12px;
     letter-spacing: 0.1em;
     border-bottom: 1px solid black;
     width: 90%;
