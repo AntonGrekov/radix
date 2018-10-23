@@ -101,22 +101,32 @@ $(function() {
 		// Product Pop-up
 
 		$prodPop = $('.product-popup');
-		$product  = $('#production .production-block__img');
-		$productG  = $('#production-glue .production-block__img');
+		$product = $('#production .production-block__img, #slider-production .production-block__img');
+		$productG  = $('#production-glue .production-block__img, #slider-glue .production-block__img');
 		$closePop_button = $('.product-popup__back-button');
 
 		// Кнопки заказать -> открытие модального окна
-		$orderButton = $("a.main-button[href='#modal']");
+		$orderButton = $('a.main-button[href="#modal"]');
+		$emailButton = $('div[href="#email"]');
 		$feedButton  = $("#mod-feed");
 
 		// Кнопка добавить отзыв -> открытие модального окна
-
+		
 		$orderButton.on('click', function () {
+			$('.contact-form__h4').html("Заказ продукта");
 			$('#modal1').modal('open');
 		});
 
+		// Кнопка отзывов
 		$feedButton.on('click', function () {
 			$('#modal2').modal('open');
+		});
+
+		// Кнопка значка email , изменяем заголовок с 'Заказ продукта' на 'Сообщение' 
+		$emailButton.on('click', function (e) {
+			$('.contact-form__h4').html("Сообщение");
+			$('#modal1').modal('open');
+			
 		});
 
 		// ***********
@@ -131,8 +141,6 @@ $(function() {
 		$closePop_button.on('click', function() {
 			$prodPop.fadeOut(1000);
 		})
-
-		
 
 		// Glue Section
 		$productG.on('click', function() {

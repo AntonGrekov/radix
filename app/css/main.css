@@ -159,6 +159,7 @@ h1, h2, h3, h4, h5, p {
 /* Menu Modal Window END */
 /* Product Popup Window */
 .product-popup {
+  display: none;
   overflow: scroll;
   width: 100%;
   height: 100%;
@@ -885,17 +886,21 @@ h1, h2, h3, h4, h5, p {
   .detailed-info-list__h3 {
     font-size: 20px; }
   .detailed-info-list__li {
-    font-size: 12px;
+    font-size: 12px; }
+  .about-block__p, .product-description__p {
+    font-weight: 500;
+    line-height: normal;
+    font-size: 14px;
     letter-spacing: 0.1em;
-    border-bottom: 1px solid black;
-    width: 90%;
-    padding-bottom: 10px;
-    padding-top: 10px; }
+    margin-bottom: 10px; }
   .main-button {
     width: 238px;
     height: 55px;
     line-height: 55px;
-    font-size: 14px; } }
+    font-size: 14px; }
+    .main-button:hover {
+      width: 208px;
+      height: 55px; } }
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {

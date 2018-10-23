@@ -103,7 +103,7 @@ function reloadHTML(cb) {
 gulp.task('watch', gulp.parallel('server', function () {
 	 gulp.watch('app/*.html', reloadHTML);
 	 gulp.watch(paths.styles.src, gulp.series('sass'));
-	 gulp.watch(['js/*.js', '!js/*.min.js'], gulp.series('compress'));
+	 gulp.watch(paths.js.src, gulp.series('compress'));
 	 gulp.watch(paths.pug.src, gulp.series('pug'));
  	 gulp.watch('app/bower_components/jquery/dist/jquery.js', gulp.series('build_jquery'));
  	//  gulp.watch(paths.styles.dest, reloadHTML)
