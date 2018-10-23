@@ -21,8 +21,7 @@
 	<script src="bower_components/bootstrap4/dist/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/onscroll-effect.es6.min.js"></script>
 
-
-
+	<script type="text/javascript" src="https://vk.com/js/api/share.js?95" charset="windows-1251"></script>
 
 	<!-- Materialize -->
 	<script src="bower_components/materialize/dist/js/materialize.js"></script>
@@ -128,31 +127,35 @@
 				</div>
 
 				<div class="menu__right">
-
-
 						<div class="social-block">
 							<div href="#email" class="social-block__circle"><a  class="social-block__img-email "></a></div>
 							<div class="social-block__circle" id="phone-input-menu">
-
 								<a class="social-block__img-phone"></a>
 								<div class="social-block__phone-input">
 
 									<form action="#" method="post" class="phone_form">
-	
 										<input id="phone" type="text" class="form-phone-input browser-default" required placeholder="+7 (___) ___-__-__" title="Формат: +7 (xxx) xxx xx xx" />
 										<div class="check-mark">
 											<i class="fas fa-phone"></i>
 										</div>
 									</form>
-
 								</div>
-
-
-
 							</div>
 						</div>
-					
+
 						<div class="main-address main-address_position-margin main-address_color-white">
+							<div class="social-network">
+								
+								<script type="text/javascript">
+									document.write(VK.Share.button({ url: "http://radix31.ru" }, { type: "custom", text: "<i class=\"social-network__item fab fa-vk\"></i>" }));
+								</script>
+
+								<a onClick="window.open('http://ok.ru/dk?st.cmd=addShare&st.s=1&st._surl=http://radix31.ru','sharer','toolbar=0,status=0,width=700,height=400');" href="javascript: void(0)" class="odnoklassniki">
+									 <i class="social-network__item fab fa-odnoklassniki-square"></i>
+								</a>
+								
+							</div>
+
 							<p class="main-address__text">
 							+7(4722)22-50-51, +7(961)171-55-11</p>
 

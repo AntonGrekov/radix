@@ -28,7 +28,6 @@ h1, h2, h3, h4, h5, p {
 
 /* Menu Modal Window */
 .menu {
-  display: none;
   width: 100%;
   min-height: 100%;
   position: fixed;
@@ -122,6 +121,15 @@ h1, h2, h3, h4, h5, p {
         border-radius: 125px;
         opacity: 1;
         background: transparent; }
+  .menu .social-network {
+    margin-bottom: 2%; }
+    .menu .social-network__item {
+      font-size: 3.2rem;
+      margin-right: 1%;
+      cursor: pointer;
+      color: #fff; }
+      .menu .social-network__item:hover {
+        color: #FB992E; }
 
 .phone_form {
   display: none;
