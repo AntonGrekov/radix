@@ -1,6 +1,6 @@
 var gulp 					= require("gulp"),
 	browserSync			= require("browser-sync"),
-	cssNano					= require("cssnano"),
+	// cssNano					= require("cssnano"),
 	sass						= require("gulp-sass"),
 	plumber					= require("gulp-plumber"),
 	gutil						= require("gulp-util"),
@@ -13,7 +13,7 @@ var gulp 					= require("gulp"),
 
 var paths = {
 
-				cwd: './',
+				cwd: './app',
 
 				pug: {
 					src: 'pug/pages/*.pug',
@@ -21,13 +21,13 @@ var paths = {
 				},
 
 				styles: {
-					src: 'sass/*.+(sass|scss)',
-					dest: 'css/'
+					src: 'app/sass/*.+(sass|scss)',  	
+					dest: 'app/css/'
 				}, 
 
 				js: {
-					src: 'js/*.js',
-					dest: 'build/js'
+					src: ['app/js/*.js', '!app/js/*.min.js'],
+					dest: 'app/js'
 				}
 
 }
@@ -66,7 +66,7 @@ gulp.task('sass', () => {
 
 
 gulp.task('uglify', function() {
-	return gulp.src(['js/*.js', '!js/*.min.js'])
+	return gulp.src(paths.js.src)
 		   .pipe(uglifyJs())
 		   .on('error', function (err) {
 				console.error('Error in js task', err.toString());
@@ -74,7 +74,7 @@ gulp.task('uglify', function() {
 		   .pipe(rename(function(path) {
 			   path.basename += ".min"
 		   }))
-		   .pipe(gulp.dest('build/js/'))
+		   .pipe(gulp.dest('app/js/'))
 		   .pipe(browserSync.reload({ stream: true }));
 })
 
@@ -101,12 +101,12 @@ function reloadHTML(cb) {
 
 
 gulp.task('watch', gulp.parallel('server', function () {
-	 gulp.watch('*.html', reloadHTML);
+	 gulp.watch('app/*.html', reloadHTML);
 	 gulp.watch(paths.styles.src, gulp.series('sass'));
 	 gulp.watch(['js/*.js', '!js/*.min.js'], gulp.series('compress'));
 	 gulp.watch(paths.pug.src, gulp.series('pug'));
  	 gulp.watch('app/bower_components/jquery/dist/jquery.js', gulp.series('build_jquery'));
- 	 gulp.watch(paths.styles.dest, reloadHTML)
+ 	//  gulp.watch(paths.styles.dest, reloadHTML)
 }));
 
 
