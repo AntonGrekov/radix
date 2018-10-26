@@ -2,7 +2,7 @@
 @import "mixin/main-mixin"
 
 .menu
-	display: none
+	// display: none
 	width: 100%
 	min-height: 100%
 	position: fixed
@@ -121,11 +121,17 @@
 
 	.social-network
 		margin-bottom: 2%
-		&__item
-			font-size: 3.2rem
+		&__item-ok, &__item-vk
 			margin-right: 1%
 			cursor: pointer
 			color: #fff
+		&__item-ok
+			font-size: 2rem
+			vertical-align: middle
+		&__item-vk
+			font-size: 2.5rem
+			vertical-align: top
+			
 
 			&:hover
 				color: $main
