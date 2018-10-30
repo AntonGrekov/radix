@@ -28,6 +28,7 @@ h1, h2, h3, h4, h5, p {
 
 /* Menu Modal Window */
 .menu {
+  display: none;
   width: 100%;
   min-height: 100%;
   position: fixed;
@@ -140,7 +141,7 @@ h1, h2, h3, h4, h5, p {
       vertical-align: middle; }
     .menu .social-network__item-vk {
       font-size: 2.5rem;
-      vertical-align: top; }
+      vertical-align: middle; }
       .menu .social-network__item-vk:hover {
         color: #FB992E; }
 
