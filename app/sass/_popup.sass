@@ -128,13 +128,13 @@
 		&__item-ok
 			font-size: 2rem
 			vertical-align: middle
-		&__item-vk
-			font-size: 2.5rem
-			vertical-align: middle
-			
-
 			&:hover
 				color: $main
+		&__item-vk
+			vertical-align: middle
+			fill: #fff
+			&:hover
+				fill: $main
 // Phone input
 
 .phone_form
@@ -282,7 +282,7 @@
 		margin: 0 0 5%
 	&__item:nth-of-type(3) 
 		margin: 0 0 7.5%
-	&__input 
+	&__input
 		background: transparent
 		font-size: 1rem
 		display: block
@@ -293,16 +293,13 @@
 		width: 100%
 		position: relative
 		outline: none
-	&__input[type="textarea"]:focus
-		// height: 200px
-		// transition: .5s all
-		// word-wrap: wrap
-	// &__input[type="textarea"]:focus ~ &__label
-	// 	top: 0
-	// 	position: absolute
-	// 	left: 0
-	// 	color: #fff
-
+	&__input[id="msg"]:focus
+		transition: .5s all
+		height: 75px
+	&__input[id="msg"]:focus ~ &__label
+		top: 0
+		position: absolute
+		left: 0
 	&__h4 
 		display: block
 		font-size: 1.9rem
@@ -310,7 +307,7 @@
 		text-align: center
 	&__label 
 		position: absolute
-		top: 50%
+		top: 45%
 		transform: translateY(-50%)
 		font-size: 1rem
 		transition: .3s 

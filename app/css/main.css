@@ -139,11 +139,13 @@ h1, h2, h3, h4, h5, p {
     .menu .social-network__item-ok {
       font-size: 2rem;
       vertical-align: middle; }
-    .menu .social-network__item-vk {
-      font-size: 2.5rem;
-      vertical-align: middle; }
-      .menu .social-network__item-vk:hover {
+      .menu .social-network__item-ok:hover {
         color: #FB992E; }
+    .menu .social-network__item-vk {
+      vertical-align: middle;
+      fill: #fff; }
+      .menu .social-network__item-vk:hover {
+        fill: #FB992E; }
 
 .phone_form {
   display: none;
@@ -310,6 +312,13 @@ h1, h2, h3, h4, h5, p {
     width: 100%;
     position: relative;
     outline: none; }
+  .contact-form__input[id="msg"]:focus {
+    transition: .5s all;
+    height: 75px; }
+  .contact-form__input[id="msg"]:focus ~ .contact-form__label {
+    top: 0;
+    position: absolute;
+    left: 0; }
   .contact-form__h4 {
     display: block;
     font-size: 1.9rem;
@@ -317,7 +326,7 @@ h1, h2, h3, h4, h5, p {
     text-align: center; }
   .contact-form__label {
     position: absolute;
-    top: 50%;
+    top: 45%;
     transform: translateY(-50%);
     font-size: 1rem;
     transition: .3s;

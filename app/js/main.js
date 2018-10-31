@@ -109,11 +109,15 @@ $(function() {
 		$orderButton = $('a.main-button[href="#modal"]');
 		$emailButton = $('div[href="#email"]');
 		$feedButton  = $("#mod-feed");
+		$modButton	 = $("#modal-button");
 
-		// Кнопка добавить отзыв -> открытие модального окна
+		// Кнопка Заказать, изменяем заголовок, прячем поле сообщение, меняем надпись кнопки на "Заказать"
 		
 		$orderButton.on('click', function () {
 			$('.contact-form__h4').html("Заказ продукта");
+			$('#msg').parent().hide();
+			$('#pphone').parent().show();
+			$modButton.prop('value', 'Заказать');
 			$('#modal1').modal('open');
 		});
 
@@ -125,6 +129,9 @@ $(function() {
 		// Кнопка значка email , изменяем заголовок с 'Заказ продукта' на 'Сообщение' 
 		$emailButton.on('click', function (e) {
 			$('.contact-form__h4').html("Сообщение");
+			$('#msg').parent().show();
+			$('#pphone').parent().hide();
+			$modButton.prop('value', 'Отправить');
 			$('#modal1').modal('open');
 			
 		});
