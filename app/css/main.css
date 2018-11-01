@@ -1548,10 +1548,6 @@ h1, h2, h3, h4, h5, p {
       line-height: 15px;
       font-size: 10px;
       width: 80%; }
-  .product-popup__back-button {
-    font-size: 12px;
-    top: 3vh;
-    right: 2vw; }
   .menu__right .main-address {
     text-align: left;
     font-size: 12px;
@@ -1561,26 +1557,10 @@ h1, h2, h3, h4, h5, p {
     display: none; }
   .social-block_position-abs {
     top: 13%; }
-  .product-popup {
-    /* Modal Window - Форма связи */ }
-    .product-popup__back-button {
-      top: 5%;
-      right: 3%; }
-  .modal {
-    width: 455px;
-    top: 40%; }
-    .modal-close {
-      position: absolute;
-      right: 5%;
-      top: 10%; }
-  .contact-form__input {
-    height: 2rem;
-    font-size: 10px; }
-  .contact-form__input:focus {
-    outline: none; }
-  .contact-form_active .contact-form__label {
-    transform: translateY(-135%);
-    font-size: 10px; } }
+  .product-popup__back-button {
+    top: 5%;
+    right: 3%;
+    font-size: 12px; } }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
