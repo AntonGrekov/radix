@@ -862,9 +862,18 @@ h1, h2, h3, h4, h5, p {
 .slider-product, .slider-glue, .slider-certs {
   display: none; }
 
+.slider-block {
+  margin-bottom: 20px; }
+
+.slick-slide {
+  transform: scale(0.7);
+  transition: 1.3s all; }
+
 .slick-current {
   position: relative;
-  text-align: center; }
+  text-align: center;
+  transform: scale(1);
+  transition: 1.3s all; }
 
 .slick-current:before, .slick-current:after {
   content: '<';
@@ -934,7 +943,7 @@ h1, h2, h3, h4, h5, p {
       width: 208px;
       height: 55px; }
   .production-block__title {
-    font-size: 20px; } }
+    font-size: 16px; } }
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
